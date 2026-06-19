@@ -28,7 +28,8 @@ namespace MagicalTower.Effects
 
         public bool Tick(float dt)
         {
-            if (_target == null || !_target.IsAlive) return false;
+            if (_target == null || !_target.IsAlive) 
+                return false;
 
             _remaining -= dt;
             _tickTimer += dt;
