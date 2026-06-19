@@ -129,7 +129,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -196,3 +196,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MagicalTower.UI.DamagePopup
   _lifetime: 0.8
   _riseSpeed: 1.5
+  _text: {fileID: 8611962360908687254}

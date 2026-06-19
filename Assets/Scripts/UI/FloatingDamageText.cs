@@ -13,18 +13,15 @@ namespace MagicalTower.UI
     {
         [SerializeField] private float _lifetime = 0.8f;
         [SerializeField] private float _riseSpeed = 1.5f;
-
-        private TextMeshPro _text;
+        [SerializeField] private TextMeshPro _text;
+        
         private Camera _camera;
         private IMemoryPool _pool;
         private Color _baseColor;
         private float _age;
 
-        private void Awake()
-        {
-            _text = GetComponent<TextMeshPro>();
-            _camera = Camera.main;
-        }
+        [Inject]
+        public void Construct(Camera camera) => _camera = camera;
 
         public void Init(Vector3 worldPos, float amount, Color color)
         {
