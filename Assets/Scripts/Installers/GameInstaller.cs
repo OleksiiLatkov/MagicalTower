@@ -25,7 +25,7 @@ namespace MagicalTower.Installers
         [SerializeField] private Enemy _enemyPrefab;
         [SerializeField] private FireballProjectile _fireballPrefab;
         [SerializeField] private BarrageProjectile _barragePrefab;
-        [SerializeField] private DamagePopup _damagePopupPrefab;
+        [SerializeField] private FloatingDamageText floatingDamageTextPrefab;
 
         [Header("Configs")]
         [SerializeField] private TowerConfig _towerConfig;
@@ -59,9 +59,9 @@ namespace MagicalTower.Installers
         private void InstallFeedback()
         {
             Container.BindInterfacesTo<FloatingTextService>().AsSingle();
-            Container.BindMemoryPool<DamagePopup, DamagePopup.Pool>()
+            Container.BindMemoryPool<FloatingDamageText, FloatingDamageText.Pool>()
                 .WithInitialSize(_popupPoolSize)
-                .FromComponentInNewPrefab(_damagePopupPrefab)
+                .FromComponentInNewPrefab(floatingDamageTextPrefab)
                 .UnderTransformGroup("DamagePopups");
         }
 

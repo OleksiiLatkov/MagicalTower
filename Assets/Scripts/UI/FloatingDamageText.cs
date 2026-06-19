@@ -9,7 +9,7 @@ namespace MagicalTower.UI
     /// returning itself to its pool.
     /// </summary>
     [RequireComponent(typeof(TextMeshPro))]
-    public class DamagePopup : MonoBehaviour
+    public class FloatingDamageText : MonoBehaviour
     {
         [SerializeField] private float _lifetime = 0.8f;
         [SerializeField] private float _riseSpeed = 1.5f;
@@ -54,21 +54,23 @@ namespace MagicalTower.UI
 
         private void Despawn()
         {
-            if (_pool != null) _pool.Despawn(this);
-            else Destroy(gameObject);
+            if (_pool != null) 
+                _pool.Despawn(this);
+            else 
+                Destroy(gameObject);
         }
 
         public void SetPool(IMemoryPool pool) => _pool = pool;
 
-        public class Pool : MonoMemoryPool<Vector3, float, Color, DamagePopup>
+        public class Pool : MonoMemoryPool<Vector3, float, Color, FloatingDamageText>
         {
-            protected override void OnCreated(DamagePopup item)
+            protected override void OnCreated(FloatingDamageText item)
             {
                 base.OnCreated(item);
                 item.SetPool(this);
             }
 
-            protected override void Reinitialize(Vector3 pos, float amount, Color color, DamagePopup item)
+            protected override void Reinitialize(Vector3 pos, float amount, Color color, FloatingDamageText item)
                 => item.Init(pos, amount, color);
         }
     }

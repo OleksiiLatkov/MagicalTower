@@ -32,7 +32,7 @@ namespace MagicalTower.Spells
             _camera = camera;
         }
 
-        protected override bool TryCast()
+        protected override bool OnCast()
         {
             _registry.GetVisible(_camera, _visible);
             if (_visible.Count == 0) 

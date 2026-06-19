@@ -7,7 +7,7 @@ using MagicalTower.UI;
 namespace MagicalTower.Core
 {
     /// <summary>
-    /// Owns the lose flow
+    /// Owns game loop (for now here is loose flow only)
     /// </summary>
     public class GameController : IInitializable, IDisposable
     {

@@ -28,7 +28,7 @@ namespace MagicalTower.Spells
             _tower = tower;
         }
 
-        protected override bool TryCast()
+        protected override bool OnCast()
         {
             IEnemyTarget target = _registry.GetRandom();
             if (target == null) return false;
