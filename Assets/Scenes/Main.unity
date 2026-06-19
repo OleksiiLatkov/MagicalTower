@@ -1400,7 +1400,7 @@ MonoBehaviour:
   _enemyPrefab: {fileID: 36322803514319477, guid: 23bd6778ff911494fb92381004df29aa, type: 3}
   _fireballPrefab: {fileID: 5180788761309798293, guid: 2e1bc9f0b9b2e47caac933151b07b610, type: 3}
   _barragePrefab: {fileID: 5955878391955646941, guid: 623b5b1f4645d4e85bfc1be44a6da125, type: 3}
-  _damagePopupPrefab: {fileID: 132406039478605011, guid: c9357f68c88f8421596197a43cded7b9, type: 3}
+  floatingDamageTextPrefab: {fileID: 132406039478605011, guid: c9357f68c88f8421596197a43cded7b9, type: 3}
   _towerConfig: {fileID: 11400000, guid: ada3140461fec4d8c991039b089dcfbd, type: 2}
   _spawnConfig: {fileID: 11400000, guid: 21cfe934f4bba4698aa5b9c0ec415347, type: 2}
   _spells:
