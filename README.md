@@ -1,5 +1,8 @@
 # Test task "Magic Tower"
 
+> [!NOTE]
+> Project implemented and checked in **Unity 6.3**
+
 <details>
 <summary>Task details</summary>
 
@@ -41,13 +44,11 @@ Your task is to develop a captivating prototype of a game where a brave Magical 
 2. The final game can look similar to this:
 <img width="616" height="350" alt="MagicalTower" src="https://github.com/user-attachments/assets/69e95c9c-3a7c-438f-90fe-1b66963b0c6a" />
 
-   
-
 Please upload the final project to a **git repository** (**GitHub**, **Bitbucket**) and share the link with us, so the reviewer can clone the project and check it out.
 </details>
 
 ## 
-Only one scene to run: `Assets/Scenes/Main.unity`. Enemies spawn around the edge and walk in; click the
+There is  Only one scene to run: `Assets/Scenes/Main.unity`. Enemies spawn around the edge and walk in; click the
 **Fireball** / **Barrage** buttons at the bottom to cast (each button shows its cooldown reloading).
 The game ends when the tower's health hits zero — a panel with a **Restart** button appears.
 
