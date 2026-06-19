@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcffdcabad49484cbd0ee76b01e8352, type: 3}
+  m_Name: FireballSpellConfig
+  m_EditorClassIdentifier: Assembly-CSharp::MagicalTower.Spells.FireballSpellConfig
+  DisplayName: Fireball
+  Cooldown: 2.5
+  Damage: 25
+  ProjectileSpeed: 12
+  AreaRadius: 3
+  BurnDamagePerSecond: 6
+  BurnDuration: 3
+  ExplosionVfx: {fileID: 929681722793042180, guid: 5cf3f2d6e8f0348eba01a2b4f269e100, type: 3}

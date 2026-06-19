@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c807652d83b9f4e36ace5fbbd09fd466, type: 3}
+  m_Name: EnemyFast
+  m_EditorClassIdentifier: Assembly-CSharp::MagicalTower.Enemies.EnemyConfig
+  DisplayName: Fast
+  MaxHealth: 18
+  MoveSpeed: 4.6
+  AttackDamage: 4
+  AttackInterval: 0.8
+  Scale: 0.75
+  Color: {r: 0.95, g: 0.85, b: 0.15, a: 1}
+  Movement:
+    rid: 6754718167726031067
+  references:
+    version: 2
+    RefIds:
+    - rid: 6754718167726031067
+      type: {class: StraightMovement, ns: MagicalTower.Enemies.Movement, asm: Assembly-CSharp}
+      data: 
