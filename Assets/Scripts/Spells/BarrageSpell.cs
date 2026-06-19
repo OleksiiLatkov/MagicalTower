@@ -9,7 +9,7 @@ namespace MagicalTower.Spells
 {
     /// <summary>
     /// Fires one small parabolic bolt at every enemy currently visible on screen, each dealing a small
-    /// amount of single-target damage.
+    /// amount of single-target damage
     /// </summary>
     public class BarrageSpell : SpellBase
     {
@@ -35,6 +35,7 @@ namespace MagicalTower.Spells
         protected override bool OnCast()
         {
             _registry.GetVisible(_camera, _visible);
+            
             if (_visible.Count == 0) 
                 return false;
 
@@ -50,6 +51,7 @@ namespace MagicalTower.Spells
                     ArcHeight = _config.ArcHeight
                 });
             }
+            
             return true;
         }
     }

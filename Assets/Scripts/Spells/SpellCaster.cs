@@ -5,8 +5,7 @@ using Zenject;
 namespace MagicalTower.Spells
 {
     /// <summary>
-    /// Lives on the tower and ticks every equipped spell so they auto-cast on their own cooldowns.
-    /// The spell list is built from the configs in the installer and injected here.
+    /// Owns every spell's cooldown each frame
     /// </summary>
     public class SpellCaster : MonoBehaviour
     {

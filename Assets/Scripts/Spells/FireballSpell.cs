@@ -8,7 +8,7 @@ namespace MagicalTower.Spells
 {
     /// <summary>
     /// Picks a random enemy and lobs a single exploding fireball at it. On impact it deals area damage
-    /// and applies a burning damage-over-time effect.
+    /// and applies a burning damage-over-time effect
     /// </summary>
     public class FireballSpell : SpellBase
     {
@@ -31,7 +31,9 @@ namespace MagicalTower.Spells
         protected override bool OnCast()
         {
             IEnemyTarget target = _registry.GetRandom();
-            if (target == null) return false;
+            
+            if (target == null) 
+                return false;
 
             _pool.Spawn(new FireballLaunch
             {
@@ -44,6 +46,7 @@ namespace MagicalTower.Spells
                 BurnDuration = _config.BurnDuration,
                 ExplosionVfx = _config.ExplosionVfx
             });
+            
             return true;
         }
     }

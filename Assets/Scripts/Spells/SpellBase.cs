@@ -1,8 +1,9 @@
+using UnityEngine;
+
 namespace MagicalTower.Spells
 {
     /// <summary>
-    /// Handles cooldown timing so concrete spells only implement targeting + projectile spawning in
-    /// <see cref="TryCast"/>.
+    /// Handles cooldown timing and the ready/cast gate, so concrete spells only implement their actual effect 
     /// </summary>
     public abstract class SpellBase : ISpell
     {
@@ -17,15 +18,30 @@ namespace MagicalTower.Spells
 
         public abstract string Name { get; }
 
+        public bool IsReady => _timer <= 0f;
+
+        public float CooldownNormalized => _cooldown <= 0f ? 0f : Mathf.Clamp01(_timer / _cooldown);
+
         public void Tick(float dt)
         {
-            if (_timer > 0f) _timer -= dt;
-            if (_timer > 0f) return;
-
-            // Only consume the cooldown if a cast actually happened (e.g. a valid target existed).
-            if (TryCast()) _timer = _cooldown;
+            if (_timer > 0f) 
+                _timer -= dt;
         }
 
-        protected abstract bool TryCast();
+        public bool TryCast()
+        {
+            if (_timer > 0f) 
+                return false;   // still on cooldown
+            
+            if (!OnCast()) 
+                return false;     // nothing happened (e.g. no valid target) — stay ready
+            
+            _timer = _cooldown;
+            
+            return true;
+        }
+
+        /// <summary>Performs the actual cast. Return true if it fired, false to leave the spell ready.</summary>
+        protected abstract bool OnCast();
     }
 }

@@ -6,9 +6,7 @@ using MagicalTower.UI;
 namespace MagicalTower.Towers
 {
     /// <summary>
-    /// The central tower the player defends. Authored in the scene (not spawned at runtime). When its
-    /// <see cref="Health"/> reaches zero it raises <see cref="Health.Died"/>, which the
-    /// <c>GameController</c> turns into the game-over flow.
+    /// The central tower the player defends. Just receiving damage and dying
     /// </summary>
     public class Tower : MonoBehaviour, IDamageable
     {
