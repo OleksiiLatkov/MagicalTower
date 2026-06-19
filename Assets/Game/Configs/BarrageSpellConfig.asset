@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BarrageSpellConfig
   m_EditorClassIdentifier: Assembly-CSharp::MagicalTower.Spells.BarrageSpellConfig
   DisplayName: Barrage
-  Cooldown: 2
+  Cooldown: 1
   Damage: 8
   ProjectileSpeed: 14
   ArcHeight: 5
